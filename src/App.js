@@ -8,7 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Navigation />
+          <Navigation title="First navbar" />
+          <Navigation title="Second navbar" />
+          <Navigation title="Third navbar" />
           <img src={logo} className="App-logo" alt="logo" />
       </div>
     );
