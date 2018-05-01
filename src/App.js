@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import TodoForm from './components/TodoForm';
+
 import {todos} from "./todos";
 
 class App extends Component {
@@ -46,11 +48,23 @@ class App extends Component {
 
                 <div className="container">
                     <div className="row mt-4">
-                        {todos}
+
+                        <div className="col-md-4 text-center">
+                            <img src={logo} className="App-logo" alt="logo"/>
+                            <TodoForm />
+                        </div>
+
+
+                        <div className="col-md-8">
+                            <div className="row">
+                                {todos}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <img src={logo} className="App-logo" alt="logo"/>
+
+
             </div>
         );
     }
