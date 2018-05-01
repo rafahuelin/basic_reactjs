@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {todos} from "../todos";
 
-export default class TodoForm extends Component {
+class TodoForm extends Component {
     constructor() {
         super();
         this.state = {
@@ -10,10 +9,15 @@ export default class TodoForm extends Component {
             description: '',
             priority: 'low'
         };
+        this.handleInput = this.handleInput.bind(this);
     }
 
     handleInput(e) {
-        console.log(e.target.value, e.target.name);
+        const { value, name } = e.target;  // e.target.value, e.target.name
+        this.setState({
+            [name]: value
+        });
+        console.log(this.state);
     }
 
     render() {
@@ -61,3 +65,5 @@ export default class TodoForm extends Component {
         );
     }
 }
+
+export default TodoForm;
