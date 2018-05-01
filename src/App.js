@@ -54,7 +54,6 @@ class App extends Component {
                             <TodoForm />
                         </div>
 
-
                         <div className="col-md-8">
                             <div className="row">
                                 {todos}
