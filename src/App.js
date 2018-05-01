@@ -24,11 +24,13 @@ class App extends Component {
     }
 
     removeTodo(index) {
-        this.setState({
-            todos: this.state.todos.filter((e, i) => {
-                return i !== index;
+        if (window.confirm('Are you sure that you want to delete this task?')) {
+            this.setState({
+                todos: this.state.todos.filter((e, i) => {
+                    return i !== index;
+                })
             })
-        });
+        }
     }
 
     render() {
